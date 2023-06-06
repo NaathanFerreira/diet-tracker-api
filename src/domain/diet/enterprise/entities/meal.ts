@@ -5,6 +5,7 @@ import { Optional } from '@/core/types/optional'
 export interface MealProps {
   title: string
   descrpition: string
+  isOnDiet: boolean
   createdAt: Date
 }
 
@@ -15,6 +16,10 @@ export class Meal extends Entity<MealProps> {
 
   get description() {
     return this.props.descrpition
+  }
+
+  get isOnDiet() {
+    return this.props.isOnDiet
   }
 
   get createdAt() {
